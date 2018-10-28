@@ -5,7 +5,7 @@ class Bottles
   end
 
   def verses(number1, number2)
-    verse(number1) + "\n" + verse(number2)
+    (number2..number1).to_a.reverse.map { |number| verse(number) }.join("\n")
   end
 
   private
