@@ -4,6 +4,12 @@ class Bottles
     first_sentence(number) + second_sentence(number, new_number)
   end
 
+  def verses(number1, number2)
+    verse(number1) + "\n" + verse(number2)
+  end
+
+  private
+
   def first_sentence(number)
     "#{bottles_count(number).capitalize} of beer on the wall, " \
     "#{bottles_count(number)} of beer.\n"
