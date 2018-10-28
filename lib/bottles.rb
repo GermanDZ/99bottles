@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Bottles
   def song
     verses(99, 0)
@@ -15,22 +17,22 @@ class Bottles
   private
 
   def first_sentence(number)
-    "#{bottles_count(number).capitalize} of beer on the wall, " \
-    "#{bottles_count(number)} of beer.\n"
+    "#{bottles_count(number).capitalize} of beer on the wall, #{bottles_count(number)} of beer.\n"
   end
 
   def second_sentence(number, new_number)
-    "#{action(number)}, " \
-    "#{bottles_count(new_number)} of beer on the wall.\n"
+    "#{action(number)}, #{bottles_count(new_number)} of beer on the wall.\n"
   end
 
   def bottles_count(number)
-    return "no more bottles" if number.zero?
-    "#{number} bottle#{"s" if number > 1}"
+    return 'no more bottles' if number.zero?
+
+    "#{number} bottle#{'s' if number > 1}"
   end
 
   def action(number)
-    return "Go to the store and buy some more" if number.zero?
-    "Take #{number > 1 ? "one" : "it"} down and pass it around"
+    return 'Go to the store and buy some more' if number.zero?
+
+    "Take #{number > 1 ? 'one' : 'it'} down and pass it around"
   end
 end
