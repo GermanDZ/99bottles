@@ -1,4 +1,8 @@
 class Bottles
+  def song
+    verses(99, 0)
+  end
+
   def verse(number)
     new_number = number.zero? ? 99 : number - 1
     first_sentence(number) + second_sentence(number, new_number)
